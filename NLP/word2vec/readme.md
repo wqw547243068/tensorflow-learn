@@ -18,7 +18,44 @@ word2vec 是 Google 于 2013 年开源推出的一个用于获取 word vector �
 - 构建skip-Gram模型需要的训练数据：由于这里采用的是skip-Gram模型进行训练，即通过中心词预测上下文。因此中心词相当于x，上下文的词相当于y。这里我们设置上下文各为一个词，假设我要对“恐怕 顶多 只 需要 三年 时间”这段话生成样本，我们应该通过“顶多”预测“恐怕”和“只”；通过“只”预测“顶多”和“需要”依次下去即可。最终的训练样本应该为（顶多，恐怕），（顶多，只），（只，顶多），（只，需要），（需要，只），（需要，三年）。
 
 ### gensim实现
-- `sudo pip install gensim`
+- 安装
+```shell
+sudo pip install gensim
+```
+- 核心代码
+   - 训练
+```python
+inp='lastread.txt'
+outp1 = 'wiki.zh.text.model'
+outp2 = 'wiki.zh.text.vector'
+model = Word2Vec(LineSentence(inp), size=400, window=5, min_count=5, workers=4)
+model.save(outp1)
+model.save_word2vec_format(outp2, binary=False)
+```
+   - 使用
+   ```python
+   # ①获取相似词
+   result = model.most_similar(u'远方')
+   for each in result:
+       print each[0] , each[1]
+   # 远处 0.66281914711
+   # 遥远 0.579495191574
+   # ②计算两者间的余弦相似性，0.853490406767
+   sim1 = model.similarity(u'男朋友', u'女朋友')
+   # ③计算集合相似性
+   list1 = [u'我', u'今天', u'很', u'伤心']
+   list2 = [u'中国',u'是', u'新', u'市场']
+   list3 = [u'心情', u'不好', u'想', u'打', u'人']
+   list_sim1 =  model.n_similarity(list1, list2)
+   print list_sim1
+   list_sim2 = model.n_similarity(list1, list3)
+   print list_sim2
+   # ④选取不同类型的词
+   list = [u'纽约', u'北京', u'美国', u'西安']
+print model.doesnt_match(list) # 美国
+list = [u'纽约', u'北京', u'华盛顿', u'女神'] # 女神
+print model.doesnt_match(list)
+   ```
 - [用gensim训练word2vec](https://zhuanlan.zhihu.com/p/29200034)
 
 ### tensorflow实现
