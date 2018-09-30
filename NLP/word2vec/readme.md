@@ -65,6 +65,10 @@ print model.doesnt_match(list)
 ```shell
 sudo pip install -r requirement.txt 
 ```
+#### 数据集
+- 语料：斗殴苍穹,https://github.com/Deermini/word2vec-tensorflow/raw/master/doupocangqiong.txt
+- 停用词表: stop_word.txt
+
 #### 训练
 - 经过大约三小时的训练后，使用s-TNE把词向量降至2维进行可视化，部分词可视化结果如下：
 ![effect](https://pic3.zhimg.com/80/v2-091fc27bb5a5bbd942da4b702d580199_hd.jpg)
