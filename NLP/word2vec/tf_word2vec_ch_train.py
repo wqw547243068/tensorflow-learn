@@ -120,7 +120,7 @@ valid_size = 9      #切记这个数字要和len(valid_word)对应，要不然�
 valid_window = 100  
 num_sampled = 64    # Number of negative examples to sample.
 #验证集
-valid_word = ['萧炎','灵魂','火焰','萧薰儿','药老','天阶',"云岚宗","乌坦城","惊诧"]
+valid_word = [u'萧炎',u'灵魂',u'火焰',u'萧薰儿',u'药老',u'天阶',u"云岚宗",u"乌坦城",u"惊诧"]
 valid_examples =[dictionary[li] for li in valid_word]
 graph = tf.Graph()
 with graph.as_default():
