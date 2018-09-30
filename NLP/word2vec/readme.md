@@ -64,6 +64,7 @@ print model.doesnt_match(list)
 ![effect](https://pic3.zhimg.com/80/v2-091fc27bb5a5bbd942da4b702d580199_hd.jpg)
 
 随机对几个词进行验证，得到的结果为：
+
 >
 Nearest to 萧炎: 萧炎, 他, 韩枫, 林焱, 古元, 萧厉, 她, 叶重,
 Nearest to 灵魂: 灵魂, 斗气, 触手可及, 乌钢, 探头探脑, 能量, 庄严, 晋阶,
@@ -72,5 +73,6 @@ Nearest to 天阶: 天阶, 地阶, 七品, 相媲美, 斗帝, 碧蛇, 稍有不�
 Nearest to 云岚宗: 云岚宗, 炎盟, 魔炎谷, 磐门, 丹塔, 萧家, 叶家, 花宗,
 Nearest to 乌坦城: 乌坦城, 加玛, 大殿, 丹域, 兽域, 大厅, 帝国, 内院,
 Nearest to 惊诧: 惊诧, 惊愕, 诧异, 震惊, 惊骇, 惊叹, 错愕, 好笑,
+
 
 # 其它
