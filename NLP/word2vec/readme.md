@@ -60,6 +60,12 @@ print model.doesnt_match(list)
 
 ### tensorflow实现
 - 参考地址：[使用tensorflow实现word2vec中文词向量的训练](https://zhuanlan.zhihu.com/p/28979653),[代码](https://github.com/Deermini/word2vec-tensorflow)
+#### 准备工作
+环境准备：
+```shell
+sudo pip install -r requirement.txt 
+```
+#### 训练
 - 经过大约三小时的训练后，使用s-TNE把词向量降至2维进行可视化，部分词可视化结果如下：
 ![effect](https://pic3.zhimg.com/80/v2-091fc27bb5a5bbd942da4b702d580199_hd.jpg)
 
