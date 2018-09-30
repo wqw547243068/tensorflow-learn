@@ -24,7 +24,8 @@ def read_data():
     """
     #读取停用词
     stop_words = []
-    with open('stop_words.txt',"r",encoding="UTF-8") as f:
+    #with open('stop_words.txt',"r",encoding="UTF-8") as f:
+    with open('stop_words.txt',"r") as f:
         line = f.readline()
         while line:
             stop_words.append(line[:-1])
@@ -34,7 +35,8 @@ def read_data():
 
     # 读取文本，预处理，分词，得到词典
     raw_word_list = []
-    with open('doupocangqiong.txt',"r", encoding='UTF-8') as f:
+    #with open('doupocangqiong.txt',"r", encoding='UTF-8') as f:
+    with open('doupocangqiong.txt',"r") as f:
         line = f.readline()
         while line:
             while '\n' in line:
