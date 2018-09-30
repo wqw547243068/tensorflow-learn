@@ -59,7 +59,7 @@ print model.doesnt_match(list)
 - [用gensim训练word2vec](https://zhuanlan.zhihu.com/p/29200034)
 
 ### tensorflow实现
-- 参考地址：[使用tensorflow实现word2vec中文词向量的训练](https://zhuanlan.zhihu.com/p/28979653)
+- 参考地址：[使用tensorflow实现word2vec中文词向量的训练](https://zhuanlan.zhihu.com/p/28979653),[代码](https://github.com/Deermini/word2vec-tensorflow)
 - 经过大约三小时的训练后，使用s-TNE把词向量降至2维进行可视化，部分词可视化结果如下：
 ![effect](https://pic3.zhimg.com/80/v2-091fc27bb5a5bbd942da4b702d580199_hd.jpg)
 
@@ -77,3 +77,5 @@ Nearest to 惊诧: 惊诧, 惊愕, 诧异, 震惊, 惊骇, 惊叹, 错愕, 好�
 
 
 # 其它
+- 其它方法
+
